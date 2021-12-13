@@ -19,9 +19,9 @@ public class MainFramework {
 			cuenta=new CuentaCorriente();
 		}else if(tipo==2) {
 			cuenta=new CuentaAhorros();
-		}else /*if(tipo==3)*/ {
+		}else if(tipo==3) {
 			cuenta=new CuentaFuturo();
-		}/*else if(tipo==4){
+		}else if(tipo==4){
 			cuenta=new ICuenta() {
 				
 				@Override
@@ -34,7 +34,9 @@ public class MainFramework {
 					System.out.println("beneficio 4");
 				}
 			};
-		}*/
+		}else {
+			System.out.println("Opcion no admitida");
+		}
 		
 		GestorCuentas gestor=new GestorCuentas(cuenta);
 		gestor.registrarCuentaHabiente();
